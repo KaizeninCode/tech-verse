@@ -1,5 +1,5 @@
 import e from "express";
-import Post from "../models/Post.js";
+import {Post} from "../models/Post.js";
 import cloudinary from "../lib/cloudinary.js";
 import { protectRoute } from "../middleware/auth.middleware.js";
 
