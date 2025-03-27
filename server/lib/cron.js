@@ -1,9 +1,9 @@
 import cron from "cron";
 import https from "https";
 
-const job = new cron.CronJob("0 */14 * * * *", async () => {
+const job = new cron.CronJob("0 */1 * * * *", () => {
   https
-    .get("https://tech-verse-app.onrender.com/", (res) => {
+    .get("https://tech-verse-app.onrender.com", (res) => {
       if (res.statusCode === 200)
         console.log("GET request sent to server successfully.");
       else console.log("GET request failed.", res.statusCode);
