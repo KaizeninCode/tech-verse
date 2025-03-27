@@ -10,7 +10,7 @@ import job from "./lib/cron.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3500;
+const port = 3500;
 
 job.start();
 app.use(cors(corsOptions));
