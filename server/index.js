@@ -5,12 +5,14 @@ import authRoutes from './routes/authRoutes.js'
 import postRoutes from './routes/postRoutes.js'
 import { corsOptions } from "./config/corsOptions.js";
 import { connectDB } from "./db/dbConn.js";
+import job from "./lib/cron.js";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3500;
 
+job.start();
 app.use(cors(corsOptions));
 app.use(express.json());
 
